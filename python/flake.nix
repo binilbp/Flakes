@@ -13,7 +13,9 @@
     in
     {
       devShells.x86_64-linux.default = pkgs.mkShell {
-        buildInputs = [ pkgs.python39];
+        buildInputs = [ 
+          (pkgs.python39.withPackages (ps: with ps; [ pip ]))
+        ];
       };
     };
 }
