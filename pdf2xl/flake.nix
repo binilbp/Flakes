@@ -2,7 +2,7 @@
   description = "KTUpdf2xl devShell";
 
   inputs = {
-    nixpkgsUstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgsUnstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixpkgs24_11.url = "github:nixos/nixpkgs?ref=nixos-24.11";
   };
 
