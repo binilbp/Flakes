@@ -6,7 +6,7 @@
     nixpkgs24_11.url = "github:nixos/nixpkgs?ref=nixos-24.11";
   };
 
-  outputs = { self, nixpkgsUnstable , nixpkgs24_11}: {
+  outputs = { self, nixpkgsUnstable , nixpkgs24_11}: 
 
     let
       pkgsUnstable = nixpkgsUnstable.legacyPackages.x86_64-linux;
@@ -14,27 +14,22 @@
 
     in {
       devShells.x86_64-linux.default = pkgs.mkShell {
-        buildInputs = [ 
-          (pkgs.python312.withPackages 
-            (pypkgs: with ps; 
-              [ pip 
-                tabula-py 
-                xlsxwriter 
-                fastapi 
-                multipart 
-                pyarrow
-                uvicorn
-                polars
-                pdfplumber
-              ]
-            )
-          )
+        buildInputs = with pkgs;[ 
+          (python312.withPackages (pypkgs: with pypkgs; [ 
+            pip 
+            tabula-py 
+            xlsxwriter 
+            fastapi 
+            multipart 
+            pyarrow
+            uvicorn
+            polars
+            pdfplumber
+          ]))
 
           #jre for tabult-py
-          pkgs.temurin-jre-bin
-
+          temurin-jre-bin
         ];
-      };
     };
   };
 }
