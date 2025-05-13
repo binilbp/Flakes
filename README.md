@@ -2,6 +2,7 @@
 Nix Flakes Repository
 
 ## Usage
+Commands are to be executed from the same dir of Nix flake <b>
 - **devShells**:
 
 For Activating dev shell with user shell and config  (here zsh):
