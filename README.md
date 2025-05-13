@@ -11,7 +11,7 @@ For Activating dev shell with user shell and config  (here zsh):
 nix develop --command zsh -i
 ```
 
-For Activating dev shell with the default bash shell in Nix flakes:
+For Activating dev shell with the default bash shell:
 
 ```bash
 nix develop 
