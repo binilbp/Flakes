@@ -16,6 +16,19 @@ For Activating dev shell with the default bash shell:
 ```bash
 nix develop 
 ```
+**Interactive Shell Activation**
+execute `devshell_choice.sh` script to get an interactive shell activation.(NOTE: this command used zsh, remove "--command zsh -i" if you dont want zsh from the script.
+
+```bash
+# grant execution permission for the scipt
+chmod +x ./devshell_choice.sh
+```
+
+
+```bash
+# execute the scipt 
+./devshell_choice.sh
+```
 
 
 
