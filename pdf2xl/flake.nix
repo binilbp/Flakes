@@ -13,12 +13,11 @@
       pkgs = nixpkgs24_11.legacyPackages.x86_64-linux;
 
     in {
-      devShells.x86_64-linux.default = pkgs.mkShell {
-        buildInputs = with pkgs;[ 
-          (python312.withPackages (pypkgs: with pypkgs; [ 
+      devShells.x86_64-linux.default = pkgs.mkShell { #this "pkgs" is command
+        buildInputs = [ 
+          (pkgs.python312.withPackages (pypkgs: with pypkgs; [ 
             pip 
             tabula-py 
-            xlsxwriter 
             fastapi 
             multipart 
             pyarrow
@@ -28,8 +27,12 @@
           ]))
 
           #jre for tabult-py
-          temurin-jre-bin
+          pkgs.temurin-jre-bin
+
+          #xlsxwriter unstable (for ver>=3.2.1)
+          pkgsUnstable.python312Packages.xlsxwriter 
+
         ];
+      };
     };
-  };
 }
