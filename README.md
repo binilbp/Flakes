@@ -20,13 +20,13 @@ nix develop
 execute `devshell_choice.sh` script to get an interactive shell activation.(NOTE: this command uses zsh, remove "--command zsh -i"  from the script if you dont want zsh.
 
 ```bash
-# grant execution permission for the scipt
+# grant execution permission for the script
 chmod +x ./devshell_choice.sh
 ```
 
 
 ```bash
-# execute the scipt 
+# execute the script 
 ./devshell_choice.sh
 ```
 
