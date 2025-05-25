@@ -17,6 +17,8 @@
         buildInputs = with pkgsUnstable; [ 
             rustc
             cargo
+            rust-analyzer
+            rustfmt
         ];
       };
     };
