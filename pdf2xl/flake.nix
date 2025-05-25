@@ -19,7 +19,7 @@
             pip 
             tabula-py 
             fastapi 
-            multipart 
+            python-multipart 
             pyarrow
             uvicorn
             polars
