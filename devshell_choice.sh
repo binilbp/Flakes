@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/env bash
+#!/usr/bin/env bash
 
 #shells location
 shellsDir=~/Projects/Flakes/*/
