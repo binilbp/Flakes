@@ -15,7 +15,7 @@
     in {
       devShells.x86_64-linux.default = pkgs.mkShell { #this "pkgs" is command
         buildInputs = with pkgs; [ 
-		nodejs_24;
+		nodejs_24
         ];
       };
     };
